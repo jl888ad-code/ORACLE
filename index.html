@@ -6,6 +6,7 @@
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Be+Vietnam+Pro:wght@100;300;400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -111,54 +112,53 @@
         .bg-radial-glow {
             background: radial-gradient(circle at top, #3c3047 0%, #190f23 100%);
         }
-        .no-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
-        .no-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
     </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
 </head>
 <body class="bg-surface-dim text-on-surface font-body-md selection:bg-primary/30 min-h-screen flex flex-col overflow-x-hidden bg-radial-glow">
-<main class="flex-grow pb-12 px-5 max-w-md mx-auto w-full pt-12">
+<!-- TopAppBar -->
+<main class="flex-grow pb-12 px-2 max-w-4xl mx-auto w-full pt-12">
 <!-- Hero Section -->
 <section class="text-center mb-12">
 <h2 class="font-headline-md text-amber-400 glow-gold mb-4 tracking-wider">天機預言所</h2>
 <p class="font-headline-lg text-on-surface leading-tight mb-2">洞悉天機 看見未來</p>
 <p class="text-on-surface-variant font-body-lg italic opacity-80">一次占卜，掌握人生全局。</p>
 </section>
-<!-- Main Content: Horizontal Scroll/Row of Tall Cards -->
-<div class="flex gap-4 overflow-x-auto pb-6 px-1 no-scrollbar snap-x">
+<!-- Main Content: Horizontal Scroll/Row of Cards -->
+<div class="grid grid-cols-3 gap-2 pb-6 px-1">
 <!-- Card 1: 星座 -->
-<a class="glass-card min-w-[280px] flex-shrink-0 rounded-3xl p-5 flex flex-col items-center snap-center relative overflow-hidden group transition-all duration-300 active:scale-95" href="https://horoscope-rho-umber.vercel.app/">
-<div class="absolute inset-0 bg-gradient-to-b from-primary/10 to-transparent pointer-events-none"></div>
-<img class="w-full h-[460px] object-cover rounded-2xl mb-6 shadow-[0_0_25px_rgba(218,185,255,0.25)]" data-alt="A tall, majestic illustration of a personified zodiac spirit, a celestial queen draped in purple and gold robes shimmering with starlight, surrounded by glowing astronomical symbols and constellations." src="https://lh3.googleusercontent.com/aida/ADBb0uiaZTxoDCYK9OLdprljwqN3sKP59FNj59Kgv7bqOEDJQbNt1vbdZRs7XPSLKMLT3yUp8pNUQEn1XZ9-gNvcLIWg1waSCgcCONCBlomk8PKfl5GVPlXKhLbAraY7pUWq0432rJghFpCiTAr9ui-xcm6E69VCsIgY0snTHwBh-j-OG1Fuv1HtJ0m7XY2QUk4O7rL7qmyZoQI3JyIdKxSE8OogtPljss3Ejw3GqRTuv4UkcFZjfIYso7WjMP9F"/>
-<h3 class="font-headline-md text-primary mb-2">星座</h3>
-<p class="text-on-surface-variant text-center text-sm mb-8 px-4">解讀星象運勢<br/>尋找靈魂的方向</p>
-<div class="w-full py-4 rounded-full border border-primary/40 text-primary font-label-md transition-all duration-300 group-hover:bg-amber-400 group-hover:text-zinc-950 group-hover:border-transparent text-center">
-                立即占卜
-            </div>
+<a class="glass-card rounded-xl p-2 flex flex-col items-center relative overflow-hidden group hover:no-underline" href="https://horoscope-rho-umber.vercel.app/">
+<div class="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent pointer-events-none"></div>
+<img class="w-full object-cover rounded-lg mb-3 shadow-[0_0_15px_rgba(218,185,255,0.2)] h-48" src="https://lh3.googleusercontent.com/aida/ADBb0uiaZTxoDCYK9OLdprljwqN3sKP59FNj59Kgv7bqOEDJQbNt1vbdZRs7XPSLKMLT3yUp8pNUQEn1XZ9-gNvcLIWg1waSCgcCONCBlomk8PKfl5GVPlXKhLbAraY7pUWq0432rJghFpCiTAr9ui-xcm6E69VCsIgY0snTHwBh-j-OG1Fuv1HtJ0m7XY2QUk4O7rL7qmyZoQI3JyIdKxSE8OogtPljss3Ejw3GqRTuv4UkcFZjfIYso7WjMP9F"/>
+<h3 class="text-lg font-bold text-primary mb-1">星座</h3>
+<p class="text-on-surface-variant text-center text-[8px] leading-tight mb-4">解讀星象運勢<br/>尋找靈魂方向</p>
+<div class="w-full py-1.5 rounded-full border border-primary/30 text-primary text-[10px] font-semibold active:bg-[#D4AF37] active:text-zinc-950 transition-all duration-300 text-center">
+                    立即占卜
+                </div>
 </a>
 <!-- Card 2: 八字 -->
-<a class="glass-card min-w-[280px] flex-shrink-0 rounded-3xl p-5 flex flex-col items-center snap-center relative overflow-hidden group transition-all duration-300 active:scale-95" href="https://bazi1-pied.vercel.app/">
-<div class="absolute inset-0 bg-gradient-to-b from-secondary/10 to-transparent pointer-events-none"></div>
-<img class="w-full h-[460px] object-cover rounded-2xl mb-6 shadow-[0_0_25px_rgba(255,180,170,0.25)]" data-alt="A tall, character-focused illustration of an ancient sage or immortal personifying the Bazi elements, surrounded by swirling energy of wood, fire, earth, metal, and water against a dark mystical background." src="https://lh3.googleusercontent.com/aida/ADBb0ujUUdn6RNMPbSBpMSNIqqloy_p7-cZnLtMpi_lk84uGyiWVqgK1s38YtmIkIVC5kUiI2x3MJRcGdbUKQ8vJxGiUfy1K2-ninYsqHCRjHTiJG_J1CHI8RDplEJ1RU840VM1DpvP-ISPHm_kNAckrwhllZ0CH5-l9y-AWyA1XVqPzANKG9k2mGnyyz3yr4wX-YjXG6biUcX-WY2oIYRSQlK8eHlbd88RDL_c2xOgvIIv4ph-mfjIHZKTw_6E"/>
-<h3 class="font-headline-md text-secondary mb-2">八字</h3>
-<p class="text-on-surface-variant text-center text-sm mb-8 px-4">推演天干地支<br/>洞悉本命定數</p>
-<div class="w-full py-4 rounded-full border border-secondary/40 text-secondary font-label-md transition-all duration-300 group-hover:bg-amber-400 group-hover:text-zinc-950 group-hover:border-transparent text-center">
-                立即占卜
-            </div>
+<a class="glass-card rounded-xl p-2 flex flex-col items-center relative overflow-hidden group hover:no-underline" href="#">
+<div class="absolute inset-0 bg-gradient-to-b from-secondary/5 to-transparent pointer-events-none"></div>
+<img class="w-full object-cover rounded-lg mb-3 shadow-[0_0_15px_rgba(255,180,170,0.2)] h-48" src="https://lh3.googleusercontent.com/aida/ADBb0ujUUdn6RNMPbSBpMSNIqqloy_p7-cZnLtMpi_lk84uGyiWVqgK1s38YtmIkIVC5kUiI2x3MJRcGdbUKQ8vJxGiUfy1K2-ninYsqHCRjHTiJG_J1CHI8RDplEJ1RU840VM1DpvP-ISPHm_kNAckrwhllZ0CH5-l9y-AWyA1XVqPzANKG9k2mGnyyz3yr4wX-YjXG6biUcX-WY2oIYRSQlK8eHlbd88RDL_c2xOgvIIv4ph-mfjIHZKTw_6E"/>
+<h3 class="text-lg font-bold text-secondary mb-1">八字</h3>
+<p class="text-on-surface-variant text-center text-[8px] leading-tight mb-4">推演天干地支<br/>洞悉本命定數</p>
+<div class="w-full py-1.5 rounded-full border border-secondary/30 text-secondary text-[10px] font-semibold active:bg-amber-400 active:text-zinc-950 transition-all duration-300 text-center">
+                    立即占卜
+                </div>
 </a>
 <!-- Card 3: 塔羅 -->
-<a class="glass-card min-w-[280px] flex-shrink-0 rounded-3xl p-5 flex flex-col items-center snap-center relative overflow-hidden group transition-all duration-300 active:scale-95" href="https://tarot-1.vercel.app/">
-<div class="absolute inset-0 bg-gradient-to-b from-tertiary/10 to-transparent pointer-events-none"></div>
-<img class="w-full h-[460px] object-cover rounded-2xl mb-6 shadow-[0_0_25px_rgba(213,187,249,0.25)]" data-alt="A tall illustration of a mysterious High Priestess character holding an illuminated tarot card, wearing velvet amethyst robes with intricate golden embroidery, set in a candlelit chamber of secrets." src="https://lh3.googleusercontent.com/aida/ADBb0uiF6eyfPixi7ZER8yLMkw11RJb126esAGMt8rwVHrM1KgvbwffmaBaoajkqDrbgw2zbJKzJNkAhw1NzBySaNMpfnQRVgvhqT4ZALf8EW5XvNy-BFPdvaC2JMMw1NH8ZpHi9EFK1ZpViKiGqdwsLfIhUIuG5hsGWe6tlrhjkyN9hxjjl0f8VAFjsXYuKRMBzbpOVQhoVBsquELLit7a5cWMo-310ItjNsrB3qm0GDUqpmZufRif5XdnDCsk3"/>
-<h3 class="font-headline-md text-tertiary mb-2">塔羅</h3>
-<p class="text-on-surface-variant text-center text-sm mb-8 px-4">抽取命運之牌<br/>揭示隱藏真相</p>
-<div class="w-full py-4 rounded-full border border-tertiary/40 text-tertiary font-label-md transition-all duration-300 group-hover:bg-amber-400 group-hover:text-zinc-950 group-hover:border-transparent text-center">
-                立即占卜
-            </div>
+<a class="glass-card rounded-xl p-2 flex flex-col items-center relative overflow-hidden group hover:no-underline" href="https://tarot-1.vercel.app/">
+<div class="absolute inset-0 bg-gradient-to-b from-secondary/5 to-transparent pointer-events-none"></div>
+<img class="w-full object-cover rounded-lg mb-3 shadow-[0_0_15px_rgba(255,180,170,0.2)] h-48" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlfG2Lw_pdX9OdESWv7pMV4hxL8M0zrScYw4jdro-3bA2kmzm6ek12kIQ7Gy77E0PMk3F6mmIEfPP7LIcIj9gXU2CXLNzfR9CzNT6TpGk1czNKpxRLwe1-SmGwxyRu5H-RIsttio_nQxjuse7A2mzoCPgxBJrSigju5WJ23eoyGf6sP6VwHG_7iEXmpCftKYrDnBElMfpglhkHBPzyGbgocRUH3kxWnOA433YZ92ucgavbau7wCNrDItIjlLjgZ9ZM8IpRmkqn33n_"/>
+<h3 class="text-lg font-bold text-secondary mb-1">塔羅</h3>
+<p class="text-on-surface-variant text-center text-[8px] leading-tight mb-4">翻開命運之牌<br/>指引迷津之路</p>
+<div class="w-full py-1.5 rounded-full border border-secondary/30 text-secondary text-[10px] font-semibold active:bg-amber-400 active:text-zinc-950 transition-all duration-300 text-center">
+                    立即占卜
+                </div>
 </a>
 </div>
 <!-- Decorative Spacer -->
@@ -168,9 +168,20 @@
 <div class="h-[1px] w-12 bg-white/10"></div>
 </div>
 </main>
+<!-- Footer -->
 <footer class="w-full flex flex-col items-center gap-4 text-center px-8 py-12 mt-auto border-t border-white/5">
 <p class="font-serif text-[11px] uppercase tracking-widest text-zinc-600">
-        © 2024 ORACLE RITUALS. SACRED KNOWLEDGE AWAITS.
-    </p>
+            © 2024 ORACLE RITUALS. SACRED KNOWLEDGE AWAITS.
+        </p>
 </footer>
+<!-- Style overrides for no-scrollbar -->
+<style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
 </body></html>
